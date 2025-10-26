@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Bread Factory - Building Tomorrow's Tools</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background: linear-gradient(135deg, #2c3e50 0%, #34495e 50%, #2c3e50 100%);
+            color: #ecf0f1;
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 4rem 2rem;
+        }
+
+        .hero {
+            text-align: center;
+            margin-bottom: 4rem;
+            animation: fadeIn 1s ease-out;
+        }
+
+        .icon {
+            font-size: 5rem;
+            margin-bottom: 1.5rem;
+            animation: float 3s ease-in-out infinite;
+            filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.3));
+        }
+
+        h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+            background: linear-gradient(135deg, #f39c12, #e74c3c);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-shadow: none;
+        }
+
+        .tagline {
+            font-size: 1.6rem;
+            opacity: 0.9;
+            font-weight: 300;
+            letter-spacing: 1px;
+            margin-bottom: 0.5rem;
+        }
+
+        .subtitle {
+            font-size: 1.1rem;
+            opacity: 0.7;
+            font-style: italic;
+            margin-top: 1rem;
+        }
+
+        .story {
+            background: rgba(255, 255, 255, 0.05);
+            border-left: 4px solid #e74c3c;
+            padding: 2rem;
+            margin: 3rem 0;
+            border-radius: 8px;
+            backdrop-filter: blur(10px);
+            animation: fadeIn 1s ease-out 0.3s both;
+        }
+
+        .story p {
+            line-height: 1.8;
+            font-size: 1.15rem;
+            margin-bottom: 1rem;
+            opacity: 0.95;
+        }
+
+        .vision {
+            background: rgba(255, 255, 255, 0.08);
+            padding: 3rem;
+            border-radius: 16px;
+            margin: 3rem 0;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            animation: fadeIn 1s ease-out 0.6s both;
+        }
+
+        .vision h2 {
+            font-size: 2.2rem;
+            margin-bottom: 1.5rem;
+            color: #f39c12;
+        }
+
+        .vision p {
+            line-height: 1.9;
+            font-size: 1.2rem;
+            opacity: 0.9;
+            margin-bottom: 1.5rem;
+        }
+
+        .values {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+
+        .value-card {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 2rem;
+            border-radius: 12px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.3s ease;
+            animation: fadeIn 1s ease-out 0.9s both;
+        }
+
+        .value-card:hover {
+            transform: translateY(-5px);
+            background: rgba(255, 255, 255, 0.08);
+            border-color: rgba(243, 156, 18, 0.5);
+        }
+
+        .value-card h3 {
+            color: #f39c12;
+            font-size: 1.4rem;
+            margin-bottom: 1rem;
+        }
+
+        .value-card p {
+            line-height: 1.7;
+            opacity: 0.85;
+        }
+
+        .cta {
+            text-align: center;
+            margin: 4rem 0 2rem;
+            animation: fadeIn 1s ease-out 1.2s both;
+        }
+
+        .cta-text {
+            font-size: 1.3rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+
+        .contact-button {
+            display: inline-block;
+            background: linear-gradient(135deg, #e74c3c, #c0392b);
+            color: #fff;
+            padding: 1.2rem 3rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-size: 1.2rem;
+            font-weight: 600;
+            box-shadow: 0 4px 15px rgba(231, 76, 60, 0.4);
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+        }
+
+        .contact-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 25px rgba(231, 76, 60, 0.6);
+            border-color: rgba(255, 255, 255, 0.3);
+        }
+
+        footer {
+            text-align: center;
+            padding: 2rem;
+            opacity: 0.6;
+            font-size: 0.95rem;
+            animation: fadeIn 1s ease-out 1.5s both;
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.5rem;
+            }
+
+            .tagline {
+                font-size: 1.3rem;
+            }
+
+            .values {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="hero">
+            <div class="icon">🏭</div>
+            <h1>The Bread Factory</h1>
+            <div class="tagline">Building Tomorrow's Tools</div>
+            <div class="subtitle">Democratizing AI-Driven Development</div>
+        </div>
+
+        <div class="story">
+            <p>
+                During World War II, my great-grandmother endured forced labor in a bread factory 
+                in Eastern Germany. In the darkest of times, that factory became more than a place 
+                of work—it became a lifeline, a means of survival for our family.
+            </p>
+            <p>
+                This is my bread factory. A place where I build the tools that help people 
+                support themselves and their families. Where I create opportunities for resilience, 
+                growth, and independence.
+            </p>
+        </div>
+
+        <div class="vision">
+            <h2>The Vision</h2>
+            <p>
+                I believe that access to advanced development tools—powered by AI—should be 
+                available to everyone, not just large corporations with deep pockets.
+            </p>
+            <p>
+                Just as that bread factory sustained my family through impossible circumstances, 
+                I'm building tools and services that empower individuals to create, innovate, 
+                and build sustainable futures for themselves and their loved ones.
+            </p>
+            <p>
+                The future is being written in code, guided by AI. Everyone deserves a seat at that table.
+            </p>
+        </div>
+
+        <div class="values">
+            <div class="value-card">
+                <h3>Accessibility</h3>
+                <p>
+                    Powerful development tools shouldn't require enterprise budgets. 
+                    We're making AI-driven development accessible to individuals and small teams.
+                </p>
+            </div>
+
+            <div class="value-card">
+                <h3>Empowerment</h3>
+                <p>
+                    Give people the tools to build their own solutions, support their families, 
+                    and create sustainable livelihoods through technology.
+                </p>
+            </div>
+
+            <div class="value-card">
+                <h3>Resilience</h3>
+                <p>
+                    Inspired by my great-grandmother's strength, we build tools that help people 
+                    adapt, survive, and thrive in changing times.
+                </p>
+            </div>
+        </div>
+
+        <div class="cta">
+            <div class="cta-text">
+                Interested in what we're building? Let's connect.
+            </div>
+            <a href="mailto:contact@breadfactory.app" class="contact-button">Get in Touch</a>
+        </div>
+
+        <footer>
+            <p>The Bread Factory • Built with purpose • Inspired by resilience</p>
+        </footer>
+    </div>
+</body>
+</html>
